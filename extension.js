@@ -28,11 +28,11 @@ function activate(context) {
       }
 
       var selection = editor.selection;
-      var seletedText = editor.document.getText(selection);
+      var selectedText = editor.document.getText(selection);
 
       editor.edit((editBuilder) => {
         // implement cammel case logic here
-        const camelText = seletedText
+        const camelText = selectedText
           .split("_")
           .filter((text) => text !== "_")
           .map((text, index) => {
